@@ -4,10 +4,10 @@ import "./TabelaProdutos.css";
 import produtos from "../../data/produtos";
 export default (props) => {
   let total = 0;
-  const li = produtos.map((produto) => {
+  const li = produtos.map((produto, i) => {
     total = total + parseFloat(produto.valor);
     return (
-      <tr>
+      <tr key={produto.id} className={i % 2 === 0 ? "Par" : "Impar"}>
         <td>{produto.id}</td>
         <td>{produto.nome}</td>
         <td>
@@ -37,7 +37,7 @@ export default (props) => {
       <tbody>
         {li}
         <tr>
-          <td colspan="2">Total</td>
+          <td colSpan="2">Total</td>
           <td>{total}</td>
         </tr>
       </tbody>

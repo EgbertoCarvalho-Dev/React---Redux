@@ -1,3 +1,15 @@
 .TableContent {
   width: 100%;
 }
+
+.TableContent th {
+  background-color: #283cae;
+  color: #fff;
+}
+
+.TableContent .Par {
+  background-color: #ddd;
+}
+.TableContent .Impar {
+  background-color: #ccc;
+}
