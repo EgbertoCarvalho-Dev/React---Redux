@@ -1,6 +1,11 @@
 import "./App.css";
 import React from "react";
 
+import Mega from "./mega/Mega";
+import Contador from "./components/contador/Contador";
+import Input from "./components/formulario/Input";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import DiretaPai from "./components/comunicacao/DiretaPai";
 import Primeiro from "./components/basicos/Primeiro";
 import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
@@ -18,6 +23,21 @@ export default (_) => {
     <div className="App">
       <h1>Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="13 - MegaSena (Desafio)" color="#424242">
+          <Mega numeroInicial={6} />
+        </Card>
+        <Card titulo="12 - Contador" color="#424242">
+          <Contador numeroInicial={10} />
+        </Card>
+        <Card titulo="11 - Componente Controlado (Input)" color="#E45F56">
+          <Input />
+        </Card>
+        <Card titulo="10 - Comunicação Indireta" color="#8BAD39">
+          <IndiretaPai />
+        </Card>
+        <Card titulo="09 - Comunicação Direta" color="#59323C">
+          <DiretaPai />
+        </Card>
         <Card titulo="08 - Renderização Condicional" color="#982395">
           <ParOuImpar numero="21" />
           <UsuarioInfo usuario={{ nome: "Egberto " }} />
